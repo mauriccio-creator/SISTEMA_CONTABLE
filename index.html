@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal interactivo de Contabilidad Administrativa.">
+    <meta name="theme-color" content="#12233B">
+    <title>Sistema Contable | Explorar y decidir</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="encabezado">
+        <div class="contenedor barra-navegacion">
+            <a href="#" class="logo" data-view="inicio">SISTEMA<span> CONTABLE.</span></a>
+            <button class="boton-inicio" data-view="inicio">Inicio</button>
+        </div>
+    </header>
+
+    <main class="contenedor principal">
+
+        <!-- PANTALLA DE INICIO -->
+        <section class="pantalla" id="vista-inicio">
+            <div class="portada">
+                <svg class="il" viewBox="0 0 300 240" aria-hidden="true">
+                    <rect class="c" x="40" y="20" width="190" height="200" rx="4"/>
+                    <path class="d" d="M70 50h130M70 74h130M70 98h130M70 122h130M70 146h130M148 38v120"/>
+                    <path class="e" d="M56 190l54-30 40 12 56-54 46-34"/>
+                    <circle class="b" cx="252" cy="84" r="9"/>
+                </svg>
+            <p class="etiqueta">Contabilidad administrativa</p>
+                <h1><span>Comprendé.</span><span>Explorá.</span><span>Decidí.</span></h1>
+                <p class="bajada">
+                    Descubrí cómo los datos contables se convierten
+                    en información útil para tomar decisiones
+                    dentro de una empresa.
+                </p>
+            </div>
+
+            <div class="proceso">
+                <h2 class="indice-titulo">Del dato a la decisión</h2>
+                <ol class="pasos">
+                    <li><h3>Datos</h3><p>Las operaciones de la empresa se registran como datos contables.</p></li>
+                    <li><h3>Información</h3><p>Los datos se organizan y se interpretan con indicadores.</p></li>
+                    <li><h3>Decisiones</h3><p>La gerencia compara alternativas y elige con mejor criterio.</p></li>
+                </ol>
+            </div>
+
+            <div class="indice">
+                <h2 class="indice-titulo">Elegí por dónde querés empezar</h2>
+                <ol class="indice-lista">
+                    <li>
+                        <button class="puerta" data-view="teoria">
+                            <span class="puerta-numero">01</span>
+                            <span class="puerta-cuerpo">
+                                <span class="puerta-categoria">Aprender</span>
+                                <span class="puerta-titulo">Explorar la teoría</span>
+                                <span class="puerta-texto">Conocé los conceptos, objetivos e importancia de la contabilidad administrativa.</span>
+                            </span>
+                            <span class="enlace-puerta">Entrar al contenido →</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="puerta" data-view="comparar">
+                            <span class="puerta-numero">02</span>
+                            <span class="puerta-cuerpo">
+                                <span class="puerta-categoria">Comprender</span>
+                                <span class="puerta-titulo">Comparar contabilidades</span>
+                                <span class="puerta-texto">Descubrí qué distingue a la contabilidad financiera, administrativa y de costos.</span>
+                            </span>
+                            <span class="enlace-puerta">Ver diferencias →</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="puerta" data-view="laboratorio">
+                            <span class="puerta-numero">03</span>
+                            <span class="puerta-cuerpo">
+                                <span class="puerta-categoria">Calcular</span>
+                                <span class="puerta-titulo">Entrar al laboratorio</span>
+                                <span class="puerta-texto">Explorá cálculos de rentabilidad, eficiencia y flujo de efectivo mediante ejemplos.</span>
+                            </span>
+                            <span class="enlace-puerta">Probar herramientas →</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="puerta" data-view="inversiones">
+                            <span class="puerta-numero">04</span>
+                            <span class="puerta-cuerpo">
+                                <span class="puerta-categoria">Evaluar</span>
+                                <span class="puerta-titulo">Evaluar inversiones</span>
+                                <span class="puerta-texto">Aprendé cómo se utilizan el VAN y la TIR para analizar proyectos de inversión.</span>
+                            </span>
+                            <span class="enlace-puerta">Explorar inversiones →</span>
+                        </button>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="nota-inicio">
+                <p>
+                    No se trata solo de conocer los números,
+                    sino de entender qué decisiones podemos tomar con ellos.
+                </p>
+                <span>Un recurso para aprender y aplicar</span>
+            </div>
+        </section>
+
+        <!-- PANTALLA DE TEORÍA -->
+        <section class="pantalla" id="vista-teoria" hidden>
+            <span class="etiqueta">01 / Aprender</span>
+            <svg class="il" viewBox="0 0 300 200" role="img" aria-label="Libro contable abierto con un gráfico de barras">
+                <path class="c" d="M150 40C110 28 60 30 30 42v118c30-12 80-14 120-2z"/>
+                <path class="c" d="M150 40c40-12 90-10 120 2v118c-30-12-80-14-120-2z"/>
+                <path class="d" d="M46 68h88M46 86h88M46 104h58M166 140h74"/>
+                <rect class="b" x="172" y="108" width="14" height="32"/>
+                <rect class="a" x="194" y="90" width="14" height="50"/>
+                <rect class="b" x="216" y="70" width="14" height="70"/>
+                <path class="d" d="M30 168q120 22 240 0"/>
+            </svg>
+            <h1 class="titulo-seccion">Los fundamentos</h1>
+            <p class="descripcion-seccion">
+                Comprendé cómo la información contable ayuda a
+                planificar, controlar y dirigir una organización.
+            </p>
+
+            <article class="definicion">
+                <h2>¿Qué es la contabilidad administrativa?</h2>
+                <p>
+                    Es un área de la contabilidad que prepara y analiza
+                    información financiera y no financiera para apoyar
+                    a los responsables de una organización en la
+                    planificación, el control y la toma de decisiones.
+                </p>
+            </article>
+
+            <div class="cuadricula">
+                <article class="concepto">
+                    <h2>Objetivos</h2>
+                    <p>Apoyar la planificación, evaluar resultados, controlar recursos y facilitar decisiones.</p>
+                </article>
+                <article class="concepto">
+                    <h2>Importancia</h2>
+                    <p>Ayuda a identificar problemas, comparar alternativas y utilizar los recursos de manera más eficiente.</p>
+                </article>
+                <article class="concepto">
+                    <h2>Toma de decisiones</h2>
+                    <p>Proporciona datos relevantes para decidir qué producir, cuánto gastar o dónde invertir.</p>
+                </article>
+            </div>
+
+            <div class="comparacion-contable">
+                <h2>El ciclo de gestión</h2>
+                <p>La información contable acompaña cada etapa del trabajo de una organización.</p>
+                <ol class="pasos" style="--n:4">
+                    <li><h3>Planificar</h3><p>Se fijan metas y se elaboran presupuestos.</p></li>
+                    <li><h3>Ejecutar</h3><p>Se realizan las operaciones del negocio.</p></li>
+                    <li><h3>Controlar</h3><p>Se comparan los resultados con lo planificado.</p></li>
+                    <li><h3>Decidir</h3><p>Se corrigen desvíos y se aprovechan oportunidades.</p></li>
+                </ol>
+            </div>
+
+            <button class="boton-volver" data-view="inicio">← Regresar al inicio</button>
+        </section>
+
+        <!-- PANTALLA DE COMPARACIÓN -->
+        <section class="pantalla" id="vista-comparar" hidden>
+            <span class="etiqueta">02 / Comprender</span>
+            <svg class="il" viewBox="0 0 300 200" role="img" aria-label="Balanza que compara dos alternativas">
+                <path class="d" d="M150 40v120M108 160h84M60 62h180M60 62l-30 56M60 62l30 56M240 62l-30 56M240 62l30 56"/>
+                <circle class="b" cx="150" cy="40" r="9"/>
+                <path class="a" d="M24 118h72a36 18 0 0 1-72 0z"/>
+                <path class="a" d="M204 118h72a36 18 0 0 1-72 0z"/>
+                <circle class="bs" cx="60" cy="106" r="11"/>
+                <rect class="bs" x="228" y="100" width="24" height="18"/>
+            </svg>
+            <h1 class="titulo-seccion">Tres enfoques contables</h1>
+            <p class="descripcion-seccion">
+                Se relacionan entre sí, pero cada uno responde
+                a necesidades diferentes.
+            </p>
+
+            <div class="enfoques">
+                <article class="enfoque">
+                    <h2>Contabilidad financiera</h2>
+                    <div class="enfoque-texto">
+                        <p>Produce información sobre la situación financiera y los resultados económicos de una entidad. Está dirigida principalmente a usuarios externos, como bancos, inversionistas y acreedores, y se presenta mediante estados financieros elaborados conforme a las normas aplicables.</p>
+                        <p class="ejemplo"><strong>Ejemplo:</strong> permite conocer si una empresa obtuvo ganancias o pérdidas durante un período y cuál es su situación económica al finalizarlo.</p>
+                    </div>
+                </article>
+
+                <article class="enfoque">
+                    <h2>Contabilidad administrativa</h2>
+                    <div class="enfoque-texto">
+                        <p>Genera información financiera y no financiera para apoyar a los responsables de una organización en la planificación, el control y la toma de decisiones. Se adapta a las necesidades internas de la gerencia y puede incluir presupuestos, pronósticos, indicadores y análisis de alternativas.</p>
+                        <p class="ejemplo"><strong>Ejemplo:</strong> ayuda a decidir si conviene ampliar la producción, reducir gastos o invertir en un nuevo proyecto.</p>
+                    </div>
+                </article>
+
+                <article class="enfoque">
+                    <h2>Contabilidad de costos</h2>
+                    <div class="enfoque-texto">
+                        <p>Identifica, clasifica, acumula y analiza los costos relacionados con la producción de bienes, la prestación de servicios y las actividades de una organización. Proporciona información para determinar costos, controlar recursos y evaluar alternativas de operación.</p>
+                        <p class="ejemplo"><strong>Ejemplo:</strong> permite calcular cuánto cuesta fabricar cada unidad de un producto y detectar oportunidades para reducir costos sin afectar su calidad.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="bloque-tabla">
+                <h2 class="indice-titulo">Comparación rápida</h2>
+                <div class="tabla-envoltura">
+                    <table class="tabla">
+                        <thead><tr><th></th><th>Financiera</th><th>Administrativa</th><th>De costos</th></tr></thead>
+                        <tbody>
+                            <tr><th>Usuarios</th><td>Externos: bancos, inversionistas y acreedores</td><td>Internos: gerencia y responsables de áreas</td><td>Internos: gerencia y producción</td></tr>
+                            <tr><th>Enfoque</th><td>Hechos que ya ocurrieron</td><td>Presente y futuro</td><td>Producción y operación</td></tr>
+                            <tr><th>Formato</th><td>Estados financieros según normas</td><td>Flexible, según la necesidad</td><td>Se adapta a la empresa</td></tr>
+                            <tr><th>Resultado</th><td>Ganancias, pérdidas y situación económica</td><td>Presupuestos, indicadores y análisis</td><td>Costo de cada producto o servicio</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="comparacion-contable">
+                <h2>Un mismo negocio, tres perspectivas</h2>
+                <p>
+                    Imaginá una fábrica de escritorios. Cada enfoque
+                    contable permite responder una pregunta diferente.
+                </p>
+
+                <div class="enfoques-comparados">
+                    <article>
+                        <h3>Contabilidad financiera</h3>
+                        <p class="pregunta"><strong>Pregunta</strong> ¿La empresa obtuvo ganancias?</p>
+                        <p>Presenta información sobre los resultados y la situación económica de la empresa.</p>
+                    </article>
+                    <article>
+                        <h3>Contabilidad administrativa</h3>
+                        <p class="pregunta"><strong>Pregunta</strong> ¿Conviene comprar una máquina nueva?</p>
+                        <p>Ayuda a comparar alternativas y apoyar las decisiones de la gerencia.</p>
+                    </article>
+                    <article>
+                        <h3>Contabilidad de costos</h3>
+                        <p class="pregunta"><strong>Pregunta</strong> ¿Cuánto cuesta fabricar cada escritorio?</p>
+                        <p>Analiza los materiales, la mano de obra y otros costos de fabricación.</p>
+                    </article>
+                </div>
+            </div>
+
+            <button class="boton-volver" data-view="inicio">← Regresar al inicio</button>
+        </section>
+
+        <!-- PANTALLA DEL LABORATORIO -->
+        <section class="pantalla" id="vista-laboratorio" hidden>
+            <span class="etiqueta">03 / Calcular</span>
+            <svg class="il" viewBox="0 0 300 200" role="img" aria-label="Calculadora">
+                <rect class="c" x="90" y="16" width="120" height="170" rx="8"/>
+                <rect class="a" x="104" y="30" width="92" height="34" rx="3"/>
+                <path class="e" d="M122 47h56"/>
+                <path class="p" d="M116 90h0M150 90h0M184 90h0M116 116h0M150 116h0M184 116h0M116 142h0M150 142h0M116 168h0M150 168h0"/>
+                <path class="q" d="M184 142h0M184 168h0"/>
+            </svg>
+            <h1 class="titulo-seccion">Laboratorio de decisiones</h1>
+            <p class="descripcion-seccion">
+                Un espacio para aplicar los conceptos con datos
+                de ejemplo y entender qué significan los resultados.
+            </p>
+
+            <div class="herramientas">
+                <article class="herramienta">
+                    <span class="glifo" aria-hidden="true">%</span>
+                    
+
+            <div>
+                        <h2>Rentabilidad</h2>
+                        <p>Analizaremos qué porcentaje de las ventas se convierte en utilidad y cómo interpretar ese resultado.</p>
+                    </div>
+                    <button class="boton-secundario" data-tool="rentabilidad">Abrir calculadora →</button>
+                </article>
+
+                <article class="herramienta">
+                    <span class="glifo" aria-hidden="true">±</span>
+                    
+
+            <div>
+                        <h2>Flujo de efectivo</h2>
+                        <p>Compararemos las entradas y salidas de dinero para conocer el flujo neto de efectivo.</p>
+                    </div>
+                    <button class="boton-secundario" data-tool="efectivo">Analizar efectivo →</button>
+                </article>
+
+                <article class="herramienta">
+                    <span class="glifo" aria-hidden="true">vs</span>
+                    
+
+            <div>
+                        <h2>Comprar o fabricar</h2>
+                        <p>Compararemos los costos de comprar un producto con los costos de fabricarlo internamente.</p>
+                    </div>
+                    <button class="boton-secundario" data-tool="comprar">Comparar alternativas →</button>
+                </article>
+
+                <article class="herramienta">
+                    <span class="glifo" aria-hidden="true">Σ</span>
+                    
+
+            <div>
+                        <h2>Análisis patrimonial</h2>
+                        <p>Analizá los activos, pasivos y patrimonio para comprender la situación financiera de una empresa.</p>
+                    </div>
+                    <button class="boton-secundario" data-tool="patrimonial">Analizar patrimonio →</button>
+                </article>
+
+                <article class="herramienta">
+                    <span class="glifo" aria-hidden="true">÷</span>
+                    
+
+            <div>
+                        <h2>Eficiencia operativa</h2>
+                        <p>Analizá cuánto vende una empresa en relación con los recursos que utiliza para operar.</p>
+                    </div>
+                    <button class="boton-secundario" data-tool="eficiencia">Analizar eficiencia →</button>
+                </article>
+            </div>
+
+            <div id="zona-calculadora" class="zona-calculadora" hidden></div>
+
+            <button class="boton-volver" data-view="inicio">← Regresar al inicio</button>
+        </section>
+
+        <!-- PANTALLA DE INVERSIONES -->
+        <section class="pantalla" id="vista-inversiones" hidden>
+            <span class="etiqueta">04 / Evaluar</span>
+            <svg class="il" viewBox="0 0 300 200" role="img" aria-label="Gráfico de barras en crecimiento con monedas">
+                <path class="d" d="M30 22v148h244"/>
+                <rect class="a" x="52" y="126" width="28" height="44"/>
+                <rect class="a" x="98" y="106" width="28" height="64"/>
+                <rect class="a" x="144" y="82" width="28" height="88"/>
+                <rect class="a" x="190" y="56" width="28" height="114"/>
+                <path class="e" d="M44 112l68-26 46-22 72-32M214 28l18 4-6 14"/>
+                <ellipse class="bs" cx="252" cy="160" rx="18" ry="6"/>
+                <ellipse class="bs" cx="252" cy="151" rx="18" ry="6"/>
+                <ellipse class="bs" cx="252" cy="142" rx="18" ry="6"/>
+            </svg>
+            <h1 class="titulo-seccion">Decidir antes de invertir</h1>
+            <p class="descripcion-seccion">
+                Evaluar una inversión implica estudiar los flujos de
+                efectivo esperados, el tiempo y el rendimiento requerido.
+            </p>
+
+            <div class="enfoques">
+                <article class="enfoque">
+                    <h2>Valor Actual Neto (VAN)</h2>
+                    <div class="enfoque-texto">
+                        <p>Calcula el valor presente de los flujos de efectivo futuros y resta la inversión inicial. Considera el valor del dinero en el tiempo.</p>
+                        <p>Un VAN positivo indica que el proyecto supera la rentabilidad exigida bajo los supuestos utilizados.</p>
+                    </div>
+                </article>
+
+                <article class="enfoque">
+                    <h2>Tasa Interna de Retorno (TIR)</h2>
+                    <div class="enfoque-texto">
+                        <p>Es la tasa de descuento que hace que el VAN de un proyecto sea igual a cero. Se compara con la rentabilidad mínima requerida, considerando las características y los riesgos de la inversión.</p>
+                    </div>
+                </article>
+            </div>
+
+            <figure class="diagrama">
+                <svg class="il" viewBox="0 0 600 244" role="img" aria-label="Flujos de efectivo de un proyecto: inversión inicial en el año 0 y tres flujos positivos">
+                    <path class="d" d="M30 110h540"/>
+                    <rect class="a" x="70" y="110" width="70" height="80"/>
+                    <rect class="b" x="190" y="60" width="70" height="50"/>
+                    <rect class="b" x="310" y="40" width="70" height="70"/>
+                    <rect class="b" x="430" y="20" width="70" height="90"/>
+                    <text x="105" y="214" text-anchor="middle">Año 0</text>
+                    <text x="225" y="214" text-anchor="middle">Año 1</text>
+                    <text x="345" y="214" text-anchor="middle">Año 2</text>
+                    <text x="465" y="214" text-anchor="middle">Año 3</text>
+                    <text x="105" y="232" text-anchor="middle">Inversión inicial</text>
+                    <text x="225" y="232" text-anchor="middle">Flujo de efectivo</text>
+                    <text x="345" y="232" text-anchor="middle">Flujo de efectivo</text>
+                    <text x="465" y="232" text-anchor="middle">Flujo de efectivo</text>
+                </svg>
+                <figcaption>La inversión inicial sale en el año 0. Los flujos de los años siguientes se traen a valor presente para calcular el VAN.</figcaption>
+            </figure>
+
+            <div class="accion-inversion">
+                <button class="boton-secundario" data-tool="inversiones">Preparar ejemplo de inversión →</button>
+            </div>
+
+            <div id="zona-inversiones" class="zona-calculadora"></div>
+
+            <button class="boton-volver" data-view="inicio">← Regresar al inicio</button>
+        </section>
+
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="contenedor pie-contenido">
+            <span>Sistema Contable · Recurso educativo</span>
+            <a href="#autor" class="firma-autor"
+               onclick="document.getElementById('autor').hidden = false; return false;">
+                Autor
+            </a>
+            <span id="autor" hidden>Elaborado por Mauricio Vásquez Vásquez.</span>
+        </div>
+    </footer>
+
+</body>
+</html>
